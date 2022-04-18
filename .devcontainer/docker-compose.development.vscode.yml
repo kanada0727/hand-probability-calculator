@@ -1,0 +1,5 @@
+version: "3.0"
+services:
+  app:
+    container_name: hand-probability-calculator-app-dev-vscode
+    command: /bin/sh -c "while sleep 1000; do :; done"

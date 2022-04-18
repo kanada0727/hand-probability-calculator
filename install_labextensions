@@ -1,0 +1,7 @@
+#! /bin/bash
+start_time=$(date +%s)
+pdm run jupyter labextension install jupyterlab-plotly
+end_time=$(date +%s)
+
+time=$((end_time - start_time))
+echo "install finished in ${time} seconds"

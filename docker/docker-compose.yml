@@ -1,0 +1,12 @@
+version: "3.0"
+services:
+  app:
+    container_name: hand-probability-calculator-app
+    image: hand-probability-calculator_app:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: ${ENV}
+    environment:
+      - SHELL=/bin/bash
+    tty: true

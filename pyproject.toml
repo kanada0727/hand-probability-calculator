@@ -1,0 +1,49 @@
+[project]
+name = "hand-probability-calculator"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "kanada0727",email = "kanada@pcl.cs.waseda.ac.jp"}
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "hydra-core>=1.2.0.dev1",
+    "scikit-learn",
+    "jupyter-dash>=0.4.2",
+]
+requires-python = ">=3.9"
+license = {text = "MIT"}
+
+[project.urls]
+Homepage = ""
+
+[tool.pdm]
+includes = []
+
+[tool.pdm.scripts]
+jupyter-up= "jupyter lab --allow-root --ip 0.0.0.0"
+jupyter-update-password= "jupyter server password"
+
+[tool.black]
+line-length=120
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "jupyterlab",
+    "ipywidgets",
+    "plotly",
+    "cufflinks",
+    "flake8",
+    "isort",
+    "vulture",
+    "black",
+    "matplotlib",
+    "line-profiler",
+    "memory-profiler",
+]
+
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"

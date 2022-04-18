@@ -1,0 +1,19 @@
+version: "3.0"
+services:
+  app:
+    container_name: hand-probability-calculator-app-dev
+    image: hand-probability-calculator_app-dev:latest
+    volumes:
+      - ../:/root/hand-probability-calculator/
+      - pypackages-hand-probability-calculator:/root/hand-probability-calculator/__pypackages__/
+      - cache:/root/.cache
+      - ~/.ssh/:/root/.ssh/:ro
+      - ~/.gitconfig:/root/.gitconfig:ro
+      - ~/.jupyter/:/root/.jupyter/
+    ports:
+      - ${port:-8888}:8888
+volumes:
+  pypackages-hand-probability-calculator:
+  cache:
+    external: true
+    name: local-cache

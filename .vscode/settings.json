@@ -1,0 +1,42 @@
+{
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": false,
+        "editor.formatOnType": false,
+        "editor.insertSpaces": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    },
+    "python.autoComplete.extraPaths": ["${workspaceFolder}/__pypackages__/3.9/lib"],
+    "python.analysis.extraPaths": [ "${workspaceFolder}/__pypackages__/3.9/lib"],
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=E203",
+    ],
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "python.terminal.activateEnvironment": true, // activate poetry on starting shell
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "files.watcherExclude": {
+        "**/.git": true,
+        "**/.ipynb_checkpoints": true,
+        "**/__pypackages__": true,
+        "**/__pycache__": true,
+        ".pdm.toml": true,
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.ipynb_checkpoints": true,
+        "**/__pycache__": true,
+        ".pdm.toml": true,
+    },
+    "remote.SSH.localServerDownload": "auto", // cache extension locally and send it on starting container; for speedup
+    "remote.autoForwardPorts": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.list.openMode": "doubleClick",
+}

@@ -1,0 +1,158 @@
+- n_hands: 2
+  tier: 1
+  combinations:
+  # ホープ＋ロビン＋シムルグ（＋α）
+    - card1:
+        - name: フラクトール
+        - name: 天璣
+      card2:
+        - tag: 鳥獣族
+        - tag: 獣戦士族
+        - tag: 獣族
+    - card1:
+        - name: ケラス
+      card2:
+        - name: ナーベル
+        - name: キット
+    - card1:
+        - name: ターコイズ
+      card2:
+        - name: セレスト
+        - name: コバルト
+- n_hands: 2
+  tier: 2
+  combinations:
+  # ホープ＋ロビン
+    - card1:
+        - name: カナリー
+      card2:
+        - name: セレスト
+        - name: コバルト
+        - name: ナーベル
+    - card1:
+        - name: ワンフォーワン
+      card2:
+        - tag: モンスター
+    - card1:
+        - name: バードコール
+      card2:
+        - tag: LL
+        - name: フラクトール
+        - name: 天璣
+    - card1:
+        - name: ナーベル
+      card2:
+        - name: ターコイズ
+  # シムルグ＋ロビン＋結界像
+    - card1:
+        - name: ターコイズ
+      card2:
+        - name: ターコイズ
+        - name: カナリー
+        - name: サファイア
+- n_hands: 2
+  tier: 3
+  combinations:
+  # ルガル＋抗戦まではいける
+    - card1:
+        - name: キット
+      card2:
+        - tag: 鳥獣族
+        - tag: 獣戦士族
+        - tag: 獣族
+        - name: バードコール
+  # ホープ単体
+    - card1:
+        - name: バードコール
+      card2:
+        - name: ワンフォーワン
+        - name: D.D.クロウ
+    - card1:
+        - name: D.D.クロウ
+      card2:
+        - name: ターコイズ
+- n_hands: 2
+  tier: 4
+  combinations:
+  # ロビン＋アルミラージ
+    - card1:
+        - name: カナリー
+      card2:
+        - name: カナリー
+        - name: サファイア
+- n_hands: 3
+  tier: 1
+  combinations:
+  # 双龍まで
+    - card1:
+        - name: サファイア
+      card2:
+        - tag: LL
+        - name: ナーベル
+        - name: D.D.クロウ
+      card3:
+        - name: セレスト
+        - name: コバルト
+  # 双龍なし
+    - card1:
+        - name: ワンフォーワン
+      card2:
+        - tag: モンスター
+      card3:
+        - name: セレスト
+- n_hands: 3
+  tier: 2
+  combinations:
+  # シムルグ＋ロビン＋巨神鳥
+      - card1:
+          - name: サファイア
+        card2: # 鳥獣族下級
+          - tag: LL
+          - name: ナーベル
+          - name: D.D.クロウ
+          - name: 結界像
+          - name: バードコール
+        card3: # 鳥獣族レベル1
+          - tag: LL
+          - name: ナーベル
+          - name: D.D.クロウ
+- n_hands: 3
+  tier: 2
+  combinations:
+  # シムルグ＋ロビン＋巨神鳥
+      - card1:
+          - name: ナーベル
+        card2: # 
+          - name: セレスト
+          - name: コバルト
+        card3: # ケラスのコスト
+          - tag: 鳥獣族
+- n_hands: 3
+  tier: 3
+  combinations:
+  # ルガル＋抗戦、手札消費4枚
+      - card1:
+          - name: ナーベル
+        card2:
+          - tag: 鳥獣族
+          - tag: 獣戦士族
+          - tag: 獣族
+          - name: バードコール
+        card3:
+          - tag: 鳥獣族
+          - tag: 獣戦士族
+          - tag: 獣族
+- n_hands: 4
+  tier: 1
+  combinations:
+  # ホープロビンシムルグ
+      - card1:
+          - name: ナーベル
+        card2:
+          - name: セレスト
+        card3:
+          - name: コバルト
+        card4:
+          - tag: 鳥獣族
+          - tag: 獣戦士族
+          - tag: 獣族

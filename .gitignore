@@ -1,0 +1,7 @@
+.vscode/*
+!.vscode/settings.json
+**/.ipynb_checkpoints/
+**/__pycache__
+__pypackages__
+.pdm.toml
+*.ipynb
