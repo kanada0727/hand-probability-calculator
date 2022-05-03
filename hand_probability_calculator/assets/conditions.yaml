@@ -3,156 +3,175 @@
   combinations:
   # ホープ＋ロビン＋シムルグ（＋α）
     - card1:
-        - name: フラクトール
-        - name: 天璣
+        name: 
+          - フラクトール
+          - 天璣
       card2:
-        - tag: 鳥獣族
-        - tag: 獣戦士族
-        - tag: 獣族
+        monster_type:
+          - 鳥獣族
+          - 獣戦士族
+          - 獣族
     - card1:
-        - name: ケラス
+        name: ケラス
       card2:
-        - name: ナーベル
-        - name: キット
+        name: 
+          - ナーベル
+          - キット
     - card1:
-        - name: ターコイズ
+        name: ターコイズ
       card2:
-        - name: セレスト
-        - name: コバルト
+        name:
+          - セレスト
+          - コバルト
 - n_hands: 2
   tier: 2
   combinations:
   # ホープ＋ロビン
     - card1:
-        - name: カナリー
+        name: カナリー
       card2:
-        - name: セレスト
-        - name: コバルト
-        - name: ナーベル
+        name: 
+          - セレスト
+          - コバルト
+          - ナーベル
     - card1:
-        - name: ワンフォーワン
+        name: ワンフォーワン
       card2:
-        - tag: モンスター
+        card_type: モンスター
     - card1:
-        - name: バードコール
+        name: バードコール
       card2:
-        - tag: LL
-        - name: フラクトール
-        - name: 天璣
+        or:
+          - tag: LL
+          - name: 
+            - フラクトール
+            - 天璣
     - card1:
-        - name: ナーベル
+        name: ナーベル
       card2:
-        - name: ターコイズ
+        name: ターコイズ
   # シムルグ＋ロビン＋結界像
     - card1:
-        - name: ターコイズ
+        name: ターコイズ
       card2:
-        - name: ターコイズ
-        - name: カナリー
-        - name: サファイア
+        name: 
+          - ターコイズ
+          - カナリー
+          - サファイア
 - n_hands: 2
   tier: 3
   combinations:
   # ルガル＋抗戦まではいける
     - card1:
-        - name: キット
+        name: キット
       card2:
-        - tag: 鳥獣族
-        - tag: 獣戦士族
-        - tag: 獣族
-        - name: バードコール
+        or:
+          - monster_type:
+            - 鳥獣族
+            - 獣戦士族
+            - 獣族
+          - name: バードコール
   # ホープ単体
     - card1:
-        - name: バードコール
+        name: バードコール
       card2:
-        - name: ワンフォーワン
-        - name: D.D.クロウ
+        name: ワンフォーワン
     - card1:
-        - name: D.D.クロウ
+        name: D.D.クロウ
       card2:
-        - name: ターコイズ
+        name: 
+          - ターコイズ
+          - バードコール
 - n_hands: 2
   tier: 4
   combinations:
   # ロビン＋アルミラージ
     - card1:
-        - name: カナリー
+        name: カナリー
       card2:
-        - name: カナリー
-        - name: サファイア
+        name: 
+          - カナリー
+          - サファイア
 - n_hands: 3
   tier: 1
   combinations:
   # 双龍まで
     - card1:
-        - name: サファイア
+        name: サファイア
       card2:
-        - tag: LL
-        - name: ナーベル
-        - name: D.D.クロウ
+        and: 
+          - monster_type: 鳥獣族
+          - level: == 1
       card3:
-        - name: セレスト
-        - name: コバルト
+        name:
+          - セレスト
+          - コバルト
   # 双龍なし
     - card1:
-        - name: ワンフォーワン
+        name: ワンフォーワン
       card2:
-        - tag: モンスター
+        card_type: モンスター
       card3:
-        - name: セレスト
+        name: セレスト
 - n_hands: 3
   tier: 2
   combinations:
   # シムルグ＋ロビン＋巨神鳥
       - card1:
-          - name: サファイア
-        card2: # 鳥獣族下級
-          - tag: LL
-          - name: ナーベル
-          - name: D.D.クロウ
-          - name: 結界像
-          - name: バードコール
-        card3: # 鳥獣族レベル1
-          - tag: LL
-          - name: ナーベル
-          - name: D.D.クロウ
+          name: サファイア
+        card2: # NSできる鳥獣族
+          and: 
+            - monster_type: 鳥獣族
+            - level: <= 4
+        card3: # サファイアで出せる鳥獣族
+          and: 
+            - monster_type: 鳥獣族
+            - level: == 1
 - n_hands: 3
   tier: 2
   combinations:
   # シムルグ＋ロビン＋巨神鳥
       - card1:
-          - name: ナーベル
+          name: ナーベル
         card2: # 
-          - name: セレスト
-          - name: コバルト
+          name: 
+            - セレスト
+            - コバルト
         card3: # ケラスのコスト
-          - tag: 鳥獣族
+          monster_type: 
+            - 鳥獣族
+            - 獣戦士族
+            - 獣族
 - n_hands: 3
   tier: 3
   combinations:
   # ルガル＋抗戦、手札消費4枚
       - card1:
-          - name: ナーベル
+          name: ナーベル
         card2:
-          - tag: 鳥獣族
-          - tag: 獣戦士族
-          - tag: 獣族
-          - name: バードコール
+          or:
+            - monster_type:
+              - 鳥獣族
+              - 獣戦士族
+              - 獣族
+            - name: バードコール
         card3:
-          - tag: 鳥獣族
-          - tag: 獣戦士族
-          - tag: 獣族
+          monster_type:
+            - 鳥獣族
+            - 獣戦士族
+            - 獣族
 - n_hands: 4
   tier: 1
   combinations:
   # ホープロビンシムルグ
       - card1:
-          - name: ナーベル
+          name: ナーベル
         card2:
-          - name: セレスト
+          name: セレスト
         card3:
-          - name: コバルト
+          name: コバルト
         card4:
-          - tag: 鳥獣族
-          - tag: 獣戦士族
-          - tag: 獣族
+          monster_type:
+            - 鳥獣族
+            - 獣戦士族
+            - 獣族

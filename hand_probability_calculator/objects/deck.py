@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from functools import cached_property
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 
 from .card import Card
 
@@ -42,9 +42,19 @@ class Deck:
 class CsvDeckReader:
     @classmethod
     def run(cls, fname):
-        card_list = pd.read_csv(fname)
+        card_list = pd.read_csv(
+            fname,
+            dtype={
+                "name": str,
+                "deck_amount": "Int64",
+                "card_type": str,
+                "monster_type": str,
+                "level": "Int64",
+                "tags": str,
+            },
+        )
         card_list["id"] = card_list.index
-        card_list["tags"] = card_list.tags.map(cls._parse_tag)
+        card_list["tags"] = card_list.tags.fillna("").map(cls._parse_tag)
         card_list["onehot_vector"] = list(np.eye(len(card_list)))
         return card_list.apply(lambda card: Card(**card.to_dict()), axis=1).values.tolist()
 
