@@ -30,9 +30,16 @@ class PossibleHandEnumerator:
             hand_components.append(cls._enumerate_for_specific_amount_elements(deck, hand_amount, n_elements))
 
         hands = [Hand(tuple(chain.from_iterable(x))) for x in list(product(*hand_components))]
-        hands = [hand for hand in hands if hand.is_valid]
+        hands = [hand for hand in hands if cls._is_valid_hand(hand)]
 
         return hands
+
+    @staticmethod
+    def _is_valid_hand(hand: Hand) -> bool:
+        """
+        同一カード名のcomponentがcombinationに複数含まれている場合invalid
+        """
+        return len(hand.hand_components) == len(set(component.card.name for component in hand.hand_components))
 
     @staticmethod
     def _enumerate_for_specific_amount_elements(deck, hand_amount, n_elements):

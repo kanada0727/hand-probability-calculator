@@ -18,13 +18,6 @@ class Hand:
         return tuple(chain.from_iterable(component.explode() for component in self.hand_components))
 
     @cached_property
-    def is_valid(self) -> bool:
-        """
-        同一カード名のcomponentがcombinationに複数含まれている場合invalid
-        """
-        return len(self.hand_components) == len(set(component.card.name for component in self.hand_components))
-
-    @cached_property
     def vector(self):
         return sum([component.vector for component in self.hand_components])
 
