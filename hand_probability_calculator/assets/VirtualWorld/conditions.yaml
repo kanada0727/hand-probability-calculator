@@ -1,0 +1,75 @@
+- n_hands: 2
+  tier: 1
+  combinations:
+  # VFD朱雀＋α
+    - card1:
+        name: 
+          - 九龍
+          - 緊急テレポート
+      card2:
+        tag: 電脳SS
+    - card1:
+        tag: 電脳NS
+      card2:
+        name: 
+          - ルゥルゥ
+          - ラオラオ
+          - リィリィ
+    - card1:
+        name: ルゥルゥ
+      card2:
+        tag: 電脳SS
+    - card1:
+        name: チィチィ
+      card2:
+        name: 
+          - ルゥルゥ
+          - ラオラオ
+          - リィリィ
+- n_hands: 2
+  tier: 2
+  combinations:
+  # VFD＋α（朱雀以外）
+    - card1:
+        or: 
+          - tag: 電脳NS
+          - name: チィチィ
+      card2:
+        name: チィチィ
+    - card1:
+        name: 青龍
+      card2:
+        name: ルゥルゥ
+        name: リィリィ
+      
+- n_hands: 3
+  tier: 1
+  combinations:
+  # VFD＋朱雀＋α
+    - card1:
+        name: 青龍
+      card2:
+        name: ルゥルゥ
+        name: リィリィ
+      card3: # 朱雀素引き
+        name: 朱雀
+    - card1:
+        name: チィチィ
+      card2:
+        name:
+          - チィチィ
+          - ニャンニャン
+      card3: # 朱雀素引き
+        name: 朱雀
+    - card1:
+        name: チィチィ
+      card2:
+        name: トゥトゥ
+      card3:
+        or: 
+          # トゥトゥの蘇生コスト
+          - monster_type:
+            - サイキック族
+            - 幻竜族
+          # 青龍コストで捨てて蘇生したトゥトゥのレベルアップ
+          - name: 朱雀
