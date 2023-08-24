@@ -38,6 +38,10 @@ class Deck:
     def total_variation(self):
         return len(self.cards)
 
+    @cached_property
+    def vector(self):
+        return self._df.deck_amount.values
+
 
 class CsvDeckReader:
     @classmethod
