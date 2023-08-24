@@ -6,6 +6,7 @@
         name: 
           - 九龍
           - 緊急テレポート
+          - 龍相顕現
       card2:
         tag: 電脳SS
     - card1:
@@ -26,6 +27,10 @@
           - ルゥルゥ
           - ラオラオ
           - リィリィ
+    - card1:
+        name: 龍相顕現
+      card2:
+        name: 青龍
 - n_hands: 2
   tier: 2
   combinations:
@@ -39,9 +44,12 @@
     - card1:
         name: 青龍
       card2:
-        name: ルゥルゥ
-        name: リィリィ
-      
+        - name: ルゥルゥ
+        - name: リィリィ
+    - card1:
+        name: 龍相顕現
+      card2:
+        name: 九龍
 - n_hands: 3
   tier: 1
   combinations:
@@ -49,8 +57,8 @@
     - card1:
         name: 青龍
       card2:
-        name: ルゥルゥ
-        name: リィリィ
+        - name: ルゥルゥ
+        - name: リィリィ
       card3: # 朱雀素引き
         name: 朱雀
     - card1:
@@ -73,3 +81,15 @@
             - 幻竜族
           # 青龍コストで捨てて蘇生したトゥトゥのレベルアップ
           - name: 朱雀
+- n_hands: 2
+  tier: 3
+  combinations:
+  # せきしょう＋バロネス
+    - card1:
+        name: 
+          - 龍相顕現
+          - バクヤ
+      card2:
+        or:
+          - monster_type: 幻竜族
+          - name: 龍相顕現
